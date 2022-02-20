@@ -12,6 +12,10 @@ const tbl = await connect({ signer, network: "testnet" });
 
 console.log(process.env.PRIV_KEY);
 // TODO lit encryption
+let litNodeClient = new LitJsSdk.LitNodeClient({
+  alertWhenUnauthorized: false,
+});
+await litNodeClient.connect();
 
 // const id = await tbl.create(
 //   "CREATE TABLE table (name text, id int, primary key (id));"
