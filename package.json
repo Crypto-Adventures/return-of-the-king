@@ -1,0 +1,19 @@
+{
+  "name": "return-of-the-king",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Crypto-Adventures/return-of-the-king.git"
+  },
+  "author": "Edmund Miller",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Crypto-Adventures/return-of-the-king/issues"
+  },
+  "homepage": "https://github.com/Crypto-Adventures/return-of-the-king#readme"
+}
