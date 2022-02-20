@@ -4,12 +4,12 @@ import CreateTable from "./consts.js";
 console.log(process.env.PRIV_KEY);
 
 // TABLELAND BOILERPLATE
-// import { Wallet } from "ethers";
-// import { connect } from "@textile/tableland";
-// // Since we don't have Metamask, supply the private key string directly
-// const privateKey = "somePrivateKeyString";
-// const signer = new Wallet(privateKey);
-// const tbl = await connect({ signer, network: "testnet" });
+import { Wallet } from "ethers";
+import { connect } from "@textile/tableland";
+// Since we don't have Metamask, supply the private key string directly
+const privateKey = process.env.PRIV_KEY
+const signer = new Wallet(privateKey);
+const tbl = await connect({ signer, network: "testnet" });
 
 // lit
 // Encrypt what the user is equiping
