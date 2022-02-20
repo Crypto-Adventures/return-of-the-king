@@ -20,6 +20,7 @@
   "dependencies": {
     "@textile/tableland": "^0.0.8-dev8",
     "dotenv": "^16.0.0",
-    "ethers": "^5.5.4"
+    "ethers": "^5.5.4",
+    "lit-js-sdk": "^1.1.128"
   }
 }

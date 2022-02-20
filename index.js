@@ -1,16 +1,16 @@
 import "dotenv/config";
 import CreateTable from "./consts.js";
-
-console.log(process.env.PRIV_KEY);
-
-// TABLELAND BOILERPLATE
+import LitJsSdk from "lit-js-sdk/build/index.node.js";
 import { Wallet } from "ethers";
 import { connect } from "@textile/tableland";
+
+// TABLELAND BOILERPLATE
 // Since we don't have Metamask, supply the private key string directly
 const privateKey = process.env.PRIV_KEY;
 const signer = new Wallet(privateKey);
 const tbl = await connect({ signer, network: "testnet" });
 
+console.log(process.env.PRIV_KEY);
 // TODO lit encryption
 
 // const id = await tbl.create(
