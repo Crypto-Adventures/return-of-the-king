@@ -19,6 +19,7 @@
   "homepage": "https://github.com/Crypto-Adventures/return-of-the-king#readme",
   "dependencies": {
     "@textile/tableland": "^0.0.8-dev8",
+    "dotenv": "^16.0.0",
     "ethers": "^5.5.4"
   }
 }

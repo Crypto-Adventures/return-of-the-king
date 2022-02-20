@@ -1,4 +1,8 @@
+import 'dotenv/config'
 import CreateTable from "./consts.js";
+
+console.log(process.env.PRIV_KEY);
+
 // TABLELAND BOILERPLATE
 // import { Wallet } from "ethers";
 // import { connect } from "@textile/tableland";
