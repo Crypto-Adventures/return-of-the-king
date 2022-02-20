@@ -38,5 +38,3 @@ CreateTable().forEach((statement) => {
   // console.log(statement);
   queries += statement;
 });
-
-console.log(queries);
