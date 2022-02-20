@@ -1,4 +1,4 @@
-import * as consts from "./consts.js";
+import CreateTable from "./consts.js";
 // TABLELAND BOILERPLATE
 // import { Wallet } from "ethers";
 // import { connect } from "@textile/tableland";
@@ -20,7 +20,7 @@ import * as consts from "./consts.js";
 // Concat to one string
 let queries = "";
 
-consts.CreateTable().forEach((statement) => {
+CreateTable().forEach((statement) => {
   // console.log(statement);
   queries += statement;
 });

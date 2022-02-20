@@ -1,4 +1,4 @@
-export const weapons = [
+const weapons = [
     "Warhammer",
     "Quarterstaff",
     "Maul",
@@ -19,7 +19,7 @@ export const weapons = [
     "Book"
 ];
 
-export const chestArmor = [
+const chestArmor = [
     "Divine Robe",
     "Silk Robe",
     "Linen Robe",
@@ -37,7 +37,7 @@ export const chestArmor = [
     "Ring Mail"
 ];
 
-export const headArmor = [
+const headArmor = [
     "Ancient Helm",
     "Ornate Helm",
     "Great Helm",
@@ -55,7 +55,7 @@ export const headArmor = [
     "Hood"
 ];
 
-export const waistArmor = [
+const waistArmor = [
     "Ornate Belt",
     "War Belt",
     "Plated Belt",
@@ -73,7 +73,7 @@ export const waistArmor = [
     "Sash"
 ];
 
-export const footArmor = [
+const footArmor = [
     "Holy Greaves",
     "Ornate Greaves",
     "Greaves",
@@ -91,7 +91,7 @@ export const footArmor = [
     "Shoes"
 ];
 
-export const handArmor = [
+const handArmor = [
     "Holy Gauntlets",
     "Ornate Gauntlets",
     "Gauntlets",
@@ -109,13 +109,13 @@ export const handArmor = [
     "Gloves"
 ];
 
-export const necklaces = [
+const necklaces = [
     "Necklace",
     "Amulet",
     "Pendant"
 ];
 
-export const rings = [
+const rings = [
     "Gold Ring",
     "Silver Ring",
     "Bronze Ring",
@@ -123,7 +123,7 @@ export const rings = [
     "Titanium Ring"
 ];
 
-export const suffixes = [
+const suffixes = [
     "of Power",
     "of Giants",
     "of Titans",
@@ -142,7 +142,7 @@ export const suffixes = [
     "of the Twins"
 ];
 
-export const namePrefixes = [
+const namePrefixes = [
     "Agony", "Apocalypse", "Armageddon", "Beast", "Behemoth", "Blight", "Blood", "Bramble",
     "Brimstone", "Brood", "Carrion", "Cataclysm", "Chimeric", "Corpse", "Corruption", "Damnation",
     "Death", "Demon", "Dire", "Dragon", "Dread", "Doom", "Dusk", "Eagle", "Empyrean", "Fate", "Foe",
@@ -153,7 +153,7 @@ export const namePrefixes = [
     "Light's", "Shimmering"
 ];
 
-export const nameSuffixes = [
+const nameSuffixes = [
     "Bane",
     "Root",
     "Bite",
@@ -174,13 +174,13 @@ export const nameSuffixes = [
     "Moon"
 ];
 
-export const traits = [
+const traits = [
     ...weapons, ...chestArmor, ...headArmor, ...footArmor, ...handArmor, ...waistArmor, ...necklaces, ...rings, ...suffixes, ...namePrefixes, ...nameSuffixes
 ];
 
 
 
-export function GiveTraits() {
+function GiveTraits() {
     let traitWithProps = traits.map(trait => {
         return {
             name: trait,
@@ -194,7 +194,7 @@ export function GiveTraits() {
     return traitWithProps;
 }
 
-export function CreateTable() {
+export default function CreateTable() {
     let tableId = "faux";
     return GiveTraits().map(trait => {
         return `INSERT INTO ${tableId} (Trait, Strength, Stealth, Charm, Speed) VALUES ('${trait.name}', ${trait.strength}, ${trait.stealth}, ${trait.charm}, ${trait.speed});`;
